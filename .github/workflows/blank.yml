@@ -1,14 +1,14 @@
 name: GitHub Actions Demo
 
-on:  [ push, workflow_dispatch ]
-#     inputs:
-#       name:
 #         description: 'Enter the name'
 #         required: true
 #         default: 'GitHub User'
 #       deploy:
 #         description: 'Deploy code after build (yes/no)'
 #         required: false
+on:  [ push, workflow_dispatch ]
+#     inputs:
+#       name:
 #         default: 'yes'
 
 jobs:
@@ -20,13 +20,13 @@ jobs:
       #- run: echo "Deploy code - ${{ github.event.inputs.deploy }}"
       
       # Display the event that triggered the workflow
-      - run: echo "The job was triggered by a ${{ github.event_name }} event."
+      - run: echo "The job was triggered by a  ( github_event = ${{ github.event_name }} )event."
       
       # Runner information
-      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub"
+      - run: echo "This job is now running on a (runner_name =  ${{ runner.os }} ) server hosted by GitHub"
       
       # Information about the repository and branch
-      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - run: echo "The name of your branch = ${{ github.ref }} and your repository =  ${{ github.repository }}."
       
       # Use Action located in https://github.com/actions
       - name: Check out repository code
