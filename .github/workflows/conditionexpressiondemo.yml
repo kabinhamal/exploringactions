@@ -1,4 +1,4 @@
-name: Condition and Expression Demo
+name: Condition and Expression Demos
 
 on:
   workflow_dispatch:
